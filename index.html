@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="styles.css" type="text/css" rel="stylesheet" />
+    <meta name="vieuwport" content= "width=device-width, initial-scale=1.0" /> 
+    <title>Gegroet</title>
+
+</head>
+<body>
+
+<h1>Gegroet!</h1>
+<p>Probeer een op de knop te klikken.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="groet"></p>
+
+<p>Door op de knop te drukken wordt u gegroet op basis van de tijd. Is het eerder dan 10 uur? dan krijgt u goedemorgen te zien. Is het niet eerder dan 10 uur maar wel eerder dan 8 uur? dan krijgt u goede middag te zien. Is het later? dan krijgt u goede avond te zien!</p>
+
+<script>
+function myFunction() {
+  var groet;
+  var tijd = new Date().getHours();
+  if (tijd < 10) {
+    groet = "Een hele goede morgen";
+  } else if (tijd < 20) {
+    groet = "Een hele goede middag";
+  } else {
+    groet = "Een hele goede avond";
+  }
+  document.getElementById("groet").innerHTML = groet;
+}
+</script>
+
+</body>
+</html>
